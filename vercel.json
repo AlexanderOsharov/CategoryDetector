@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "main_script.py",
+      "use": "@vercel/python",
+      "config": {
+        "entrypoint": "app"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "main_script.py"
+    }
+  ]
+}
